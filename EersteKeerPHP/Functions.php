@@ -1,7 +1,7 @@
-<?php    
-echo "Hello World - ";  //echo dient om te tonen op de page
-echo nl2br("Hello Again\r\n");  //nl2br Zorgt ervoor dat \r\n kan worden gebruikt voor een new line
-//////////////////////////////////////////////////////////////////
+<?php 
+//====================================================================================================================
+// FUNCTIONS
+//====================================================================================================================
 
 //Hieronder een simpele functie
 $eersteVariabele = 3;
@@ -13,7 +13,7 @@ function optellen($eerste, $tweede){
 }
 
 optellen($eersteVariabele, $tweedeVariabele);
-////////////////////////////////////////////////////////////////
+//--------------------------------------------------
 
 //Verwacht wordt dat de function changeVar() de globale variabele $derdeVar veranderd naar "variabele veranderd", 
 //maar dit is niet het geval. $derdeVar binnen de functie is enkel beschikbaar binnen de functie
@@ -37,7 +37,7 @@ function changeVarGlobal(){
 changeVarGlobal();
 echo $derdeVar;
 echo nl2br("\n");
-/////////////////////////////////////////////////////////////////
+//--------------------------------------------------
 
 //return functies werken zoal gewend
 function getNameViaReturnFunction(){
@@ -46,7 +46,7 @@ function getNameViaReturnFunction(){
 
 echo getNameViaReturnFunction();
 echo nl2br("\n");
-/////////////////////////////////////////////////////////////////
+//--------------------------------------------------
 
 //Er bestaat iets genaamd variable functions in php
 //Er wordt een variabele aangemaakt met de naam van de functie als string. Roep deze variabele op als een functie, 
@@ -58,9 +58,6 @@ function getAuthor(){
 $variableFunctionName = "getAuthor";
 $variableFunctionName();
 echo nl2br("\n");
-///////////////////////////////////////////////////////////////////
 
-
-$leerling->Sveld
 
 ?>
