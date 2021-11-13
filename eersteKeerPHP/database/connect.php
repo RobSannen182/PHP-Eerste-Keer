@@ -1,4 +1,7 @@
 <?php
+//==================================================================================================
+// DATABASE CONNECTION
+//==================================================================================================
 
 // Login credentials
 $dbPassword = "RobSannen";
@@ -9,14 +12,21 @@ $dbName = "PHPOefenen";
 // connetie
 $connection = new mysqli($dbServer, $dbUserName, $dbPassword, $dbName);
 
+//-----------------
 // connectie info
+//-----------------
+
 // print_r($connection);
 
+//-------------------
 // connectie sluiten
+//-------------------
+
 // $connection->close();
 
-
+//-------------------
 // Check for mysqli
+//-------------------
 
 // if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
 //     echo 'We don\'t have mysqli!!!';
@@ -24,7 +34,9 @@ $connection = new mysqli($dbServer, $dbUserName, $dbPassword, $dbName);
 //     echo 'Phew we have it!';
 // }
 
+//-------
 // Info
+//-------
 
 //phpinfo();
 
