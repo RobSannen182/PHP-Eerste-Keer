@@ -153,7 +153,7 @@ echo(nl2br(PHP_EOL));
 // File hier beschikbaar maken
 include "FiledPerson.php";
 
-$fp = new FiledPerson("Bob", "Peeters", "1985");
+$fp = new filedPerson("Bob", "Peeters", "1985");
 echo(nl2br($fp->getFullName().PHP_EOL));
 
 // bij include_once kan er maar 1 instantie worden aangemaakt van FiledPerson
