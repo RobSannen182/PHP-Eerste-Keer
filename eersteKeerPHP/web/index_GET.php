@@ -1,3 +1,14 @@
+<?php
+
+include "../database/connect.php";
+
+$query = "SELECT * FROM authors ORDER BY first_name";
+$result = $connection->query($query);
+
+// via de php-tags kan $result geraadpleegd worden binnen de html
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,18 +23,20 @@
 			</h2>
 		</div>        
         <div id="Body">
-            <form method="get" action="final.php" >
+            <form method="get" action="final_GET.php" >
                 <div>
                     <label>Favorite Author:</label>
                     <select name="author">
-                        <option></option>
+                        <?php while($row = $result->fetch_assoc()){ ?>
+                        <option value="<?= $row["id"] ?>"><?= $row["first_name"] ?> <?= $row["last_name"] ?></option>
+                        <?php } ?>
                     </select>
                 </div>		
                 <div class="multiple">
                     <label>Favorite Century:</label>
-                    17th Century <input type="checkbox" name="century" value="17th">
-                    18th Century <input type="checkbox" name="century" value="18th"> 
-                    19th Century <input type="checkbox" name="century" value="19th"> 
+                    17th Century <input type="checkbox" name="century[]" value="17th">
+                    18th Century <input type="checkbox" name="century[]" value="18th"> 
+                    19th Century <input type="checkbox" name="century[]" value="19th"> 
                 </div>
                 <div>
                     <label>Comments:</label>

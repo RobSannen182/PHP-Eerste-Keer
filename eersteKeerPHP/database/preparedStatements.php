@@ -1,10 +1,8 @@
 <?php
 
+
 include "connect.php";
 
-if ($connection->connect_errno) {
-    die("Failed to connect to the database. Reason: ".$connection->connect_error);
-}
 
 //==================================================================================================
 // PREPARED STATEMENTS  == voor queries met input van gebruiker (tegen sql-injection)

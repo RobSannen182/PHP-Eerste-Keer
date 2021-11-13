@@ -12,6 +12,12 @@ $dbName = "PHPOefenen";
 // connetie
 $connection = new mysqli($dbServer, $dbUserName, $dbPassword, $dbName);
 
+// error message on connection error
+if ($connection->connect_errno) {
+    die("Failed to connect to the database. Reason: ".$connection->connect_error);
+}
+//--------------------------------------------------
+
 //-----------------
 // connectie info
 //-----------------
